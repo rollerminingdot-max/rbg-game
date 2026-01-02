@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+  touch-action: none;
+  font-family: Arial, sans-serif;
+}
+
+/* Start Screen */
+#startScreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#startBtn {
+  background: yellow;
+  color: white;
+  font-size: 28px;
+  padding: 16px 50px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Canvas */
+canvas {
+  display: block;
+  }
