@@ -1,39 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background: #000;
-  overflow: hidden;
-  touch-action: none;
-  font-family: Arial, sans-serif;
-}
-
-/* Start Screen */
-#startScreen {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(6px);
+  margin: 0;
+  background: #111;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  z-index: 10;
+  height: 100vh;
+  padding: 20px;
+  touch-action: none;
+  font-family: sans-serif;
 }
 
-#startBtn {
-  background: yellow;
-  color: white;
-  font-size: 28px;
-  padding: 16px 50px;
-  border: none;
-  border-radius: 12px;
-  font-weight: bold;
+#game {
+  width: 70%;
+  height: 90%;
+  background: #222;
+  border: 2px solid #555;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Canvas */
-canvas {
-  display: block;
-  }
+#player {
+  width: 40px;
+  height: 40px;
+  background: #00ff55;
+  position: absolute;
+  left: 300px;
+  top: 200px;
+}
+
+/* الشفرات */
+.blade {
+  width: 26px;
+  height: 6px;
+  background: red;
+  position: absolute;
+  transform-origin: left center;
+  border-radius: 3px;
+}
+
+/* العدو (صورة) */
+.enemy {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-image: url("https://i.imgur.com/tZ1dm2q.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+/* شريط الدم */
+.enemy .hp {
+  width: 48px;
+  height: 5px;
+  background: red;
+  position: absolute;
+  top: -7px;
+  left: 0;
+}
+
+/* joystick */
+#joystick {
+  width: 120px;
+  height: 120px;
+  background: #333;
+  border-radius: 50%;
+  position: relative;
+}
+
+#stick {
+  width: 50px;
+  height: 50px;
+  background: #777;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  } 
